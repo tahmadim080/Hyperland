@@ -1,0 +1,139 @@
+configuration {
+    modes: "drun";
+    sorting-method: "normal";
+    show-icons: true;
+    matching: "regex";
+    drun-match-fields: "name";
+    display-run: "menu:";
+    display-drun: "Launch:";
+}
+
+* {
+    font: "JetBrains Mono 11";
+    background-color: transparent;
+    text-color: #c6d0f5;
+
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+window {
+    location: center;
+    width: 500;
+    y-offset: -20;
+
+    border-radius: 12px;
+    border: 0px;
+
+    /* D0 = ~80% opacity. Adjust the last two hex digits to change transparency */
+    background-color: #303446D0;
+}
+
+mainbox {
+    padding: 8px;
+    background-color: transparent;
+}
+
+inputbar {
+    background-color: #232634D0;
+    border-radius: 6px;
+    border: 0px;
+
+    padding: 8px 12px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: #c6d0f5;
+    background-color: transparent;
+}
+
+entry {
+    text-color: #c6d0f5;
+    placeholder: "search";
+    placeholder-color: #c6d0f5;
+    background-color: transparent;
+}
+
+listview {
+    background-color: transparent;
+    margin: 8px 0 0;
+
+    columns: 1;
+    lines: 6;
+    fixed-height: false;
+    scrollbar: false;
+    border: 0px;
+}
+
+/* ===== Elements ===== */
+element {
+    padding: 8px 10px;
+    spacing: 6px;
+    border-radius: 6px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: #c6d0f5;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: #c6d0f5;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color: #c6d0f5;
+}
+
+element normal.active {
+    background-color: #232634D0;
+    text-color: #c6d0f5;
+}
+
+element selected.normal,
+element selected.active {
+    background-color: #232634D0;
+    text-color: #c6d0f5;
+}
+
+element selected.urgent {
+    background-color: #232634D0;
+    text-color: #c6d0f5;
+}
+
+element-icon {
+    size: 1em;
+    vertical-align: 0.5;
+    background-color: transparent;
+}
+
+element-text {
+    text-color: inherit;
+    background-color: transparent;
+    highlight: None;
+}
+
+message {
+    margin: 8px 0 0;
+    border-radius: 8px;
+    border: 0px;
+
+    background-color: #303446D0;
+}
+
+textbox {
+    padding: 8px 16px;
+    background-color: transparent;
+    str: "";
+}
+
+separator {
+    expand: false;
+    str: "";
+    background-color: transparent;
+}
