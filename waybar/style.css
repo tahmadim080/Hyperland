@@ -1,0 +1,97 @@
+* {
+    font-family: "Jetbrains Mono", monospace;
+    font-weight: 800;
+    font-size: 13px;
+    color: #f2d5cf;
+}
+
+window#waybar {
+    background: rgba(48, 52, 70, 0.65);
+    border: 1px solid rgba(35, 38, 52, 0.8);
+    border-radius: 10px;
+    margin: 6px 8px;
+    padding: 0;
+}
+
+#workspaces,
+#mpris{
+    color: #eebebe;
+    padding: 4px;
+}
+#battery{
+    color: #a6d189;
+    padding: 4px;
+}
+#wireplumber{
+    color: #babbf1;
+    padding: 4px;
+}
+#backlight{
+    color: #99d1db;
+    padding: 4px;
+}
+#network,
+#clock{
+
+    color: #e5c890;
+    padding: 4px;
+
+}
+#tray,
+#custom-launcher,
+#custom-lock {
+    background: transparent;
+    border: none;
+    margin: 0 4px;
+    padding: 4px 3px;
+    border-radius: 0;
+    color: #e78284;
+}
+
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 0px 3px;
+    margin: 4px 1px;
+    border-radius: 50%;
+    background: transparent;
+    color: #f2d5cf;
+    font-size: 5px;
+}
+
+#workspaces button.active {
+    color: #f2d5cf;
+    background: #232634;
+}
+
+#workspaces button:hover {
+    background: #232634;
+    color: #f2d5cf;
+}
+
+#workspaces button.urgent {
+    background: #232634;
+    color: #f2d5cf;
+    border-radius: 4px;
+}
+
+#wireplumber.muted {
+    opacity: 0.55;
+}
+
+#custom-lock:hover {
+    color: #e78284;
+}
+
+tooltip {
+    background: #232634;
+    border: 1px solid #232634;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: #232634;
+    font-size: 11px;
+}

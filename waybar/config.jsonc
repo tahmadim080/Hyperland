@@ -1,0 +1,84 @@
+{
+  "layer": "bottom",
+  "position": "bottom",
+  "spacing": 3,
+  "height": 1,
+  "margin-top": 0,
+  "margin-bottom": 7,
+  "margin-left": 150,
+  "margin-right": 150,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "mpris",
+  ],
+  
+  "modules-center": [
+
+  ],
+
+  "modules-right": [
+    "wireplumber",
+    "backlight",
+    "battery",
+    "clock",
+    "custom/power",
+    "custom/lock",
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "default": "○",
+      "active": "●",
+      "urgent": "●"
+    }
+  },
+
+  "mpris": {
+    "format": "{artist} - {title}",
+    "format-paused": "{artist} - {title}",
+    "max-length": 60,
+    "tooltip": false,
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 6,
+    "tooltip": false,
+
+  },
+
+  "wireplumber": {
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "muted",
+    "tooltip": false,
+    "format-icons": {
+      "default": ["","",""],
+      "headphones": "",
+      "headset": ""
+    }
+  },
+
+  "backlight":{
+    "tooltip": false,
+  },
+
+  "battery":{
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "{:%I:%M %a, %b %d}",
+    "tooltip": false,
+  },
+
+  "custom/lock": {
+    "format": " ",
+    "on-click": "hyprlock",
+    "tooltip": false,
+    "tooltip-format": "Lock Screen"
+  }
+}
