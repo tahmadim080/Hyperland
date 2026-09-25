@@ -30,10 +30,12 @@ local menu        = "rofi -show drun"
 hl.on("hyprland.start", function ()
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE")
   hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE")
+  hl.exec_cmd("gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono 14'")
   hl.exec_cmd("killall -9 xdg-desktop-portal-hyprland xdg-desktop-portal-gnome xdg-desktop-portal-wlr xdg-desktop-portal")
   hl.exec_cmd("/usr/libexec/xdg-desktop-portal-hyprland &")
   hl.exec_cmd("sleep 2 && /usr/libexec/xdg-desktop-portal &")
   hl.exec_cmd("waybar")
+  hl.exec_cmd("gammastep -O 5200 &")
   hl.exec_cmd("swaybg -i /home/tahmadim/Pictures/Wally/wallhaven-pomo69.jpg")
 end)
 
@@ -46,6 +48,8 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+hl.env("MOZ_ENABLE_WAYLAND", "1")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -295,7 +299,7 @@ local function hypr(keyword, args)
 end
 
 --------------------------------
----- LAYER RULES (BLUR FIX) ----
+---- LAYER RULES ----
 --------------------------------
 
 hl.layer_rule({
